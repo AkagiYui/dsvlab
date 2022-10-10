@@ -3,25 +3,25 @@ Duosi Principles of Computer Composition Virtual Experiment System ,DS-VLAB v1.0
 Copyright(C)2013 ZHANG Wen-fen, Email: yydzhwf@163.com  Address: Xiangnan University, Chenzhou Hunan, China
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
 
-¶àË¼¼ÆËã»ú×é³ÉÔ­ÀíÍøÂçĞéÄâÊµÑéÏµÍ³, DS-VLAB v1.0 £¨2013Äê¿ª·¢£¬2016Äê·¢²¼£©
-°æÈ¨ËùÓĞ(C) ÕÅö©ëƒ, µç×ÓÓÊÏä: yydzhwf@163.com
-±¾³ÌĞòÎª×ÔÓÉÈí¼ş£»Äú¿ÉÒÀ¾İ×ÔÓÉÈí¼ş»ù½ğ»áËù·¢±íµÄGNU GENERAL PUBLIC LICENSE£¬¶Ô±¾³ÌĞòÔÙ´Î·¢²¼ºÍ/»òĞŞ¸Ä¡£
+å¤šæ€è®¡ç®—æœºç»„æˆåŸç†ç½‘ç»œè™šæ‹Ÿå®éªŒç³»ç»Ÿ, DS-VLAB v1.0 ï¼ˆ2013å¹´å¼€å‘ï¼Œ2016å¹´å‘å¸ƒï¼‰
+ç‰ˆæƒæ‰€æœ‰(C) å¼ é›¯é›°, ç”µå­é‚®ç®±: yydzhwf@163.com
+æœ¬ç¨‹åºä¸ºè‡ªç”±è½¯ä»¶ï¼›æ‚¨å¯ä¾æ®è‡ªç”±è½¯ä»¶åŸºé‡‘ä¼šæ‰€å‘è¡¨çš„GNU GENERAL PUBLIC LICENSEï¼Œå¯¹æœ¬ç¨‹åºå†æ¬¡å‘å¸ƒå’Œ/æˆ–ä¿®æ”¹ã€‚
 
-×÷Õß£ºÏæÄÏÑ§ÔºÈí¼şÓëÍ¨ĞÅ¹¤³ÌÑ§ÔºÕÅö©ëƒÀÏÊ¦
+ä½œè€…ï¼šæ¹˜å—å­¦é™¢è½¯ä»¶ä¸é€šä¿¡å·¥ç¨‹å­¦é™¢å¼ é›¯é›°è€å¸ˆ
 
-¶àË¼¼ÆËã»ú×é³ÉÔ­ÀíÍøÂçĞéÄâÊµÑéÏµÍ³, DS-VLAB v1.2 £¨2021Äê5ÔÂĞŞ¸Ä£¬ÔÚV1.0°æ±¾»ù´¡ÉÏ½«VML¸ÄÎªSVG£©
+å¤šæ€è®¡ç®—æœºç»„æˆåŸç†ç½‘ç»œè™šæ‹Ÿå®éªŒç³»ç»Ÿ, DS-VLAB v1.2 ï¼ˆ2021å¹´5æœˆä¿®æ”¹ï¼Œåœ¨V1.0ç‰ˆæœ¬åŸºç¡€ä¸Šå°†VMLæ”¹ä¸ºSVGï¼‰
 */
 
 
 function Circuit() {
-    this.componentAll = [];  //ÒÑ»­³öµÄÊµÑéÆ÷¼şÁĞ±í(²»°üÀ¨ÒÑÉ¾³ıµÄ£©
-    this.count = 0;   //Æ÷¼ş¼ÆÊı£¬°üÀ¨ÒÑÉ¾³ıµÄÆ÷¼ş£¬ÓÃÓÚÉú³ÉÆ÷¼şid
+    this.componentAll = [];  //å·²ç”»å‡ºçš„å®éªŒå™¨ä»¶åˆ—è¡¨(ä¸åŒ…æ‹¬å·²åˆ é™¤çš„ï¼‰
+    this.count = 0;   //å™¨ä»¶è®¡æ•°ï¼ŒåŒ…æ‹¬å·²åˆ é™¤çš„å™¨ä»¶ï¼Œç”¨äºç”Ÿæˆå™¨ä»¶id
     this.linecolor = "yellow";
-    var targetPin = null;  //À­Á¬½ÓÏßÊ±µÄÄ¿±êÒı½Å
+    var targetPin = null;  //æ‹‰è¿æ¥çº¿æ—¶çš„ç›®æ ‡å¼•è„š
     var _this = this;
     var  arrowCount=0;
 
-    //ÔÚ¸ø¶¨div£¨parentId£©µÄÖ¸¶¨Î»ÖÃ£¨offsetX, offsetY£©´¦»­³öÊµÑéÆ÷¼ş£¨componentName£©
+    //åœ¨ç»™å®šdivï¼ˆparentIdï¼‰çš„æŒ‡å®šä½ç½®ï¼ˆoffsetX, offsetYï¼‰å¤„ç”»å‡ºå®éªŒå™¨ä»¶ï¼ˆcomponentNameï¼‰
     this.addComponent = function (parentId, componentName, offsetX, offsetY, componentId) {
         var component = new window[componentName]();
         if (componentId == null) {
@@ -64,7 +64,7 @@ function Circuit() {
         }
         ;
 
-        //»­³öËùÓĞÒı½Å
+        //ç”»å‡ºæ‰€æœ‰å¼•è„š
         var pinDiv, pn, pinFun;
         for (var i = 0; i < component.pinName.length; i++) {
             pinDiv = document.createElement("div");
@@ -75,7 +75,7 @@ function Circuit() {
                 pinDiv.style.width = component.pinWidth + 2 + "px";
                 pinDiv.style.height = component.pinHeight + "px";
             } else {
-                pinDiv.style.width = component.pinWidth + 6 + "px"; //ÈÃÒı½Å¼ä²¿·ÖÖØµş£¬×ÖºÃ¿´Ğ©
+                pinDiv.style.width = component.pinWidth + 6 + "px"; //è®©å¼•è„šé—´éƒ¨åˆ†é‡å ï¼Œå­—å¥½çœ‹äº›
                 pinDiv.style.height = component.pinHeight + 2 + "px";
             }
             ;
@@ -100,7 +100,7 @@ function Circuit() {
             }
             ;
             pinFun = component.pinFunction[i];
-            if (pinFun == 10 || pinFun == 0) {   //Èç¹ûÊÇÊäÈëÒı½Å
+            if (pinFun == 10 || pinFun == 0) {   //å¦‚æœæ˜¯è¾“å…¥å¼•è„š
                 pinDiv.style.color = "#003C9D";
                 $(pinDiv).bind("mousedown", doNone);
                 $(pinDiv).bind("mouseenter", function () {
@@ -111,12 +111,12 @@ function Circuit() {
                 });
             }
             ;
-            if (pinFun == 1) {   //Èç¹ûÊÇÊä³öÒı½Å
+            if (pinFun == 1) {   //å¦‚æœæ˜¯è¾“å‡ºå¼•è„š
                 pinDiv.style.color = "green";
                 $(pinDiv).bind("mousedown", lineDrag);
             }
             ;
-            if (pinFun == 11) {   //Èç¹ûÊÇÊäÈë/Êä³öÒı½Å
+            if (pinFun == 11) {   //å¦‚æœæ˜¯è¾“å…¥/è¾“å‡ºå¼•è„š
                 pinDiv.style.color = "#b200ff";
                 $(pinDiv).bind("mouseenter", function () {
                     targetPin = this;
@@ -127,14 +127,14 @@ function Circuit() {
                 $(pinDiv).bind("mousedown", lineDrag);
             }
             ;
-            if (pinFun >= 2) {   //Èç¹ûÊÇÆäËüÒı½Å
+            if (pinFun >= 2) {   //å¦‚æœæ˜¯å…¶å®ƒå¼•è„š
                 $(pinDiv).bind("mousedown", doNone);
             }
             ;
 
             pinDiv.onselectstart = function () {
                 return false;
-            };//²»ÈÃdivÖĞµÄÎÄ×Ö±»Ñ¡ÖĞ
+            };//ä¸è®©divä¸­çš„æ–‡å­—è¢«é€‰ä¸­
 
             $("#" + compDiv.id).append(pinDiv);
         }
@@ -152,7 +152,7 @@ function Circuit() {
     };
 
 
-    //Éú³ÉÒ»ÌõÁ¬½ÓÏß
+    //ç”Ÿæˆä¸€æ¡è¿æ¥çº¿
     this.lineCreate = function (paintDiv, fromX, fromY, toX, toY) {
         console.log("========" + fromX + "  " + toX)
         var newLine = document.createElement("div");
@@ -201,7 +201,7 @@ function Circuit() {
         return p;
     };
 
-    //Éú³ÉÁ¬½ÓÏßÊ±£¬´ÓÆğÊ¼µãÍùÄ¿±êµãÍÏ¶¯µÄ¹ı³ÌÖĞ£¬ÏßµÄ±ä»¯
+    //ç”Ÿæˆè¿æ¥çº¿æ—¶ï¼Œä»èµ·å§‹ç‚¹å¾€ç›®æ ‡ç‚¹æ‹–åŠ¨çš„è¿‡ç¨‹ä¸­ï¼Œçº¿çš„å˜åŒ–
     function lineChange(line, fromX, fromY, toX, toY) {
         var p1X, p1Y, p2X, p2Y;
         if (Math.abs(fromX - toX) > Math.abs(fromY - toY)) {
@@ -232,7 +232,7 @@ function Circuit() {
         $(line).attr("d", path);
      };
 
-    //Éú³ÉÁ¬½ÓÏßÊ±£¬Êó±êµ½´ïÄ¿±êÒı½Åºó£¬µ÷Õû¡¢¶¨Î»Á¬½ÓÏß£»ÍÏ¶¯Æ÷¼şÊ±£¬µ÷ÕûÁ¬½ÓÏß
+    //ç”Ÿæˆè¿æ¥çº¿æ—¶ï¼Œé¼ æ ‡åˆ°è¾¾ç›®æ ‡å¼•è„šåï¼Œè°ƒæ•´ã€å®šä½è¿æ¥çº¿ï¼›æ‹–åŠ¨å™¨ä»¶æ—¶ï¼Œè°ƒæ•´è¿æ¥çº¿
     this.lineAdjust = function (line, startPin, endPin) {
         var sX, sY, eX, eY;
         var st = startPin.offsetTop;
@@ -335,9 +335,9 @@ function Circuit() {
     };
 
 
-    //Êä³öÒı½ÅµÄÊó±êÊÂ¼ş
+    //è¾“å‡ºå¼•è„šçš„é¼ æ ‡äº‹ä»¶
     function lineDrag(a) {
-        window.event.cancelBubble = true;  //½ûÖ¹ÊÂ¼şÃ°Åİµ½ÏÂÒ»²ã
+        window.event.cancelBubble = true;  //ç¦æ­¢äº‹ä»¶å†’æ³¡åˆ°ä¸‹ä¸€å±‚
         if (!a) a = window.event;
         var d = document;
         var sTop = Math.max(d.body.scrollTop, d.documentElement.scrollTop);
@@ -351,15 +351,15 @@ function Circuit() {
             if (!a) a = window.event;
             var sTop = Math.max(d.body.scrollTop, d.documentElement.scrollTop);
             var sLeft = Math.max(d.body.scrollLeft, d.documentElement.scrollLeft);
-            if (targetPin == null) {  //Êó±ê»¹Ã»µ½´ïÄ¿±êµãÊ±
+            if (targetPin == null) {  //é¼ æ ‡è¿˜æ²¡åˆ°è¾¾ç›®æ ‡ç‚¹æ—¶
                 lineChange(line, ox, oy, a.clientX + sLeft, a.clientY + sTop);
-            } else { //Êó±êÒÑ½øÈëÄ¿±êÒı½ÅÊ±
+            } else { //é¼ æ ‡å·²è¿›å…¥ç›®æ ‡å¼•è„šæ—¶
                 _this.lineAdjust(line, originPin, targetPin);
             }
         }
 
         d.onmouseup = function () {
-            if (targetPin == null) {//Èç¹ûÃ»ÓĞ½øÈëÈÎºÎÄ¿±êÒı½Å                   ´ıĞŞ¸Ä£º»¹Ó¦¸Ã¼ì²éÄ¿±êÒı½ÅÊÇ·ñÒÑ¾­±»Á¬½ÓÁË
+            if (targetPin == null) {//å¦‚æœæ²¡æœ‰è¿›å…¥ä»»ä½•ç›®æ ‡å¼•è„š                   å¾…ä¿®æ”¹ï¼šè¿˜åº”è¯¥æ£€æŸ¥ç›®æ ‡å¼•è„šæ˜¯å¦å·²ç»è¢«è¿æ¥äº†
                 var a = $(line).parent()[0];
                 $(a).parent()[0].remove(true);
             } else {
@@ -374,12 +374,12 @@ function Circuit() {
     };
 
 
-    //ÊäÈëÒı½ÅºÍÆäËüÒı½ÅµÄmousedownÊÂ¼ş
+    //è¾“å…¥å¼•è„šå’Œå…¶å®ƒå¼•è„šçš„mousedownäº‹ä»¶
     function doNone(a) {
-        window.event.cancelBubble = true;  //½ûÖ¹ÊÂ¼şÃ°Åİµ½ÏÂÒ»²ã
+        window.event.cancelBubble = true;  //ç¦æ­¢äº‹ä»¶å†’æ³¡åˆ°ä¸‹ä¸€å±‚
     };
 
-    //¸ù¾İid´ÓcomponentAllÖĞÕÒµ½Æ¥ÅäµÄÆ÷¼ş
+    //æ ¹æ®idä»componentAllä¸­æ‰¾åˆ°åŒ¹é…çš„å™¨ä»¶
     this.findById = function (Id) {
         for (var i = 0; i < _this.componentAll.length; i++) {
             if (_this.componentAll[i].id == Id)
@@ -389,7 +389,7 @@ function Circuit() {
         return 0;
     };
 
-    //¸ù¾İid´ÓcomponentAllÖĞÕÒµ½Æ¥ÅäµÄÆ÷¼ş²¢É¾³ı
+    //æ ¹æ®idä»componentAllä¸­æ‰¾åˆ°åŒ¹é…çš„å™¨ä»¶å¹¶åˆ é™¤
     function deleteById(Id) {
         for (var i = 0; i < _this.componentAll.length; i++) {
             if (_this.componentAll[i].id == Id) {
@@ -404,13 +404,13 @@ function Circuit() {
     };
 
 
-    //°ÑÁ¬½ÓÏßĞÅÏ¢±£´æµ½Æ÷¼ş¶ÔÏóÖĞ,ÉèÖÃline.id
+    //æŠŠè¿æ¥çº¿ä¿¡æ¯ä¿å­˜åˆ°å™¨ä»¶å¯¹è±¡ä¸­,è®¾ç½®line.id
     this.addLineToComponent = function (line, startPin, endPin) {
         var sPId, ePId, sCId, sPNo, eCId, ePNo, p;
         sPId = startPin.id;
         p = sPId.indexOf("Pin");
-        sCId = sPId.substring(0, p);//»ñÈ¡ÆğÊ¼Òı½ÅµÄÆ÷¼şID
-        sPNo = sPId.substring(p + 3);//»ñÈ¡ÆğÊ¼Òı½ÅµÄ±àºÅ
+        sCId = sPId.substring(0, p);//è·å–èµ·å§‹å¼•è„šçš„å™¨ä»¶ID
+        sPNo = sPId.substring(p + 3);//è·å–èµ·å§‹å¼•è„šçš„ç¼–å·
         ePId = endPin.id;
         p = ePId.indexOf("Pin");
         eCId = ePId.substring(0, p);
@@ -422,7 +422,7 @@ function Circuit() {
         line.id = sPId + "To" + ePId;
     };
 
-    //ÍÏ¶¯Æ÷¼şcÊ±£¬¸üĞÂÆäËùÓĞÁ¬½ÓÏß
+    //æ‹–åŠ¨å™¨ä»¶cæ—¶ï¼Œæ›´æ–°å…¶æ‰€æœ‰è¿æ¥çº¿
     this.lineReplace = function (c) {
         var comp = _this.findById(c.id);
         var i, j, l, s, e;
@@ -439,7 +439,7 @@ function Circuit() {
     };
 
 
-    //É¾³ıÁ¬½ÓÏß
+    //åˆ é™¤è¿æ¥çº¿
     function lineDelete(line) {
         var lId, sPId, ePId, sCId, sPNo, eCId, ePNo, p, i;
         var aline = $(line).find("path")[1];
@@ -456,8 +456,8 @@ function Circuit() {
         sPId = lId.substring(0, p);
         ePId = lId.substring(p + 2);
         p = sPId.indexOf("Pin");
-        sCId = sPId.substring(0, p);//»ñÈ¡ÆğÊ¼Òı½ÅµÄÆ÷¼şID
-        sPNo = sPId.substring(p + 3);//»ñÈ¡ÆğÊ¼Òı½ÅµÄ±àºÅ
+        sCId = sPId.substring(0, p);//è·å–èµ·å§‹å¼•è„šçš„å™¨ä»¶ID
+        sPNo = sPId.substring(p + 3);//è·å–èµ·å§‹å¼•è„šçš„ç¼–å·
         p = ePId.indexOf("Pin");
         eCId = ePId.substring(0, p);
         ePNo = ePId.substring(p + 3);
@@ -482,11 +482,11 @@ function Circuit() {
         $(line).remove();
     };
 
-    //ÓÒ»÷É¾³ıÁ¬½ÓÏßµÄÊó±êÊÂ¼ş
+    //å³å‡»åˆ é™¤è¿æ¥çº¿çš„é¼ æ ‡äº‹ä»¶
     function deleteL(a) {
         if (!a) a = window.event;
         if (a.button == 2) {
-            var r = confirm("ÊÇ·ñÒªÉ¾³ıÁ¬½ÓÏß£¿");
+            var r = confirm("æ˜¯å¦è¦åˆ é™¤è¿æ¥çº¿ï¼Ÿ");
             if (r == true) {
                 lineDelete(this);
             }
@@ -496,7 +496,7 @@ function Circuit() {
     };
 
 
-    //É¾³ıÆ÷¼şÒÔ¼°ÓëÆ÷¼şÏàÁ¬µÄËùÓĞÁ¬½ÓÏß
+    //åˆ é™¤å™¨ä»¶ä»¥åŠä¸å™¨ä»¶ç›¸è¿çš„æ‰€æœ‰è¿æ¥çº¿
     function componentDelete(c) {
         var i, j;
         var comp = _this.findById(c.id);
@@ -512,11 +512,11 @@ function Circuit() {
 
     };
 
-    //ÓÒ»÷É¾³ıÆ÷¼ş¼°ÆäÁ¬½ÓÏßµÄÊó±êÊÂ¼ş
+    //å³å‡»åˆ é™¤å™¨ä»¶åŠå…¶è¿æ¥çº¿çš„é¼ æ ‡äº‹ä»¶
     function deleteC(a) {
         if (!a) a = window.event;
         if (a.button == 2) {
-            var r = confirm("ÊÇ·ñÒªÉ¾³ıÔªÆ÷¼ş¼°ÆäÁ¬½ÓÏß£¿");
+            var r = confirm("æ˜¯å¦è¦åˆ é™¤å…ƒå™¨ä»¶åŠå…¶è¿æ¥çº¿ï¼Ÿ");
             if (r == true) {
                 componentDelete(this);
             }
@@ -526,7 +526,7 @@ function Circuit() {
     };
 
 
-    //Ë«»÷Æ÷¼şÏÔÊ¾ËùÓĞÒı½ÅµÄÖµ
+    //åŒå‡»å™¨ä»¶æ˜¾ç¤ºæ‰€æœ‰å¼•è„šçš„å€¼
     function showPinValue() {
         var s = "";
         var comp = _this.findById(this.id);
@@ -583,7 +583,7 @@ function Circuit() {
     };
 
 
-    /*¿ª¹ØµÄÊó±êµ¥»÷ÊÂ¼ş*/
+    /*å¼€å…³çš„é¼ æ ‡å•å‡»äº‹ä»¶*/
     function switchClick(a) {
         if (!a) a = window.event;
         if (a.button == 2) {
@@ -628,7 +628,7 @@ function Circuit() {
         };
     };
 
-    /*µ¥Âö³åÆ÷¼şµÄÊó±êµ¥»÷ÊÂ¼ş*/
+    /*å•è„‰å†²å™¨ä»¶çš„é¼ æ ‡å•å‡»äº‹ä»¶*/
     function singlePulseClick(a) {
         if (!a) a = window.event;
         if (a.button == 2) {
@@ -688,8 +688,8 @@ function Circuit() {
         }
         ;
 
-        this.count = 0;   //Æ÷¼ş¼ÆÊı£¬°üÀ¨ÒÑÉ¾³ıµÄÆ÷¼ş£¬ÓÃÓÚÉú³ÉÆ÷¼şid
-        var targetPin = null;  //À­Á¬½ÓÏßÊ±µÄÄ¿±êÒı½Å
+        this.count = 0;   //å™¨ä»¶è®¡æ•°ï¼ŒåŒ…æ‹¬å·²åˆ é™¤çš„å™¨ä»¶ï¼Œç”¨äºç”Ÿæˆå™¨ä»¶id
+        var targetPin = null;  //æ‹‰è¿æ¥çº¿æ—¶çš„ç›®æ ‡å¼•è„š
     };
 
 
