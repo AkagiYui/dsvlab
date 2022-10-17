@@ -3,7 +3,7 @@ Duosi Principles of Computer Composition Virtual Experiment System ,DS-VLAB v1.0
 Copyright(C)2013 ZHANG Wen-fen, Email: yydzhwf@163.com  Address: Xiangnan University, Chenzhou Hunan, China
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
 
-多思计算机组成原理网络虚拟实验系统, DS-VLAB v1.0 
+多思计算机组成原理网络虚拟实验系统, DS-VLAB v1.0
 版权所有(C) 张雯雰, 电子邮箱: yydzhwf@163.com
 本程序为自由软件；您可依据自由软件基金会所发表的GNU GENERAL PUBLIC LICENSE，对本程序再次发布和/或修改。
 
@@ -63,7 +63,7 @@ $(function () {
                         click: function () {
                             mwrite();
                         }
-                    } ,                  
+                    } ,
                   {
                         text: "Close",
                         click: function () {
@@ -129,7 +129,7 @@ $(function () {
     $("#aboutdlg").dialog({
          autoOpen: false,
          modal: true,
-         height: 340,
+         height: 400,
          width: 460,
     });
     $("#about").click(function () {
@@ -139,11 +139,10 @@ $(function () {
 
 });
 
-var lcolor;
+var lcolor = "#0000ff";
 function selectcolor() {
         mycircuit.linecolor = lcolor;
         mycircuit.linecolorchange(lcolor);
-        ;
  };
 
  function select_list() {
