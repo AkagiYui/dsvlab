@@ -46,7 +46,7 @@ CompoSwitch.prototype.beReady = function () {
 
 //设置输入引脚的值，并且判断目前芯片是否已达到运算条件
 CompoSwitch.prototype.input = function () {
-    if (this.pinValue[0] === 0) {
+    if (this.pinValue[0] == 0) {
         this.pinValue[0] = 1;
     } else {
         this.pinValue[0] = 0;
