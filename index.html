@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="zh-CN">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=9">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -44,25 +44,20 @@
     <script type='text/javascript' src='./js/component/74ls163.js'></script>
     <script type='text/javascript' src='./js/component/bus.js'></script>
 
-
-
     <script type='text/javascript'>
         $(window).load(function () {
+          document.onselectstart = () => false;
+          document.oncontextmenu = () => false;
 
-            document.onselectstart = function () {
-                return false;
-            };
-            document.oncontextmenu = function () {
-                return false;
-            };
+          //初始化菜单、工具栏和工具箱
+          menuInit();
+          toolbarInit();
+          mytoolbox = new toolbox();
 
-            //初始化菜单、工具栏和工具箱
-            menuInit();
-            toolbarInit();
-            mytoolbox = new toolbox();
+          mycircuit = new Circuit();
+          cDispatch = new Dispatch(mycircuit);
 
-            mycircuit = new Circuit();
-            cDispatch = new Dispatch(mycircuit);
+          //修改连接线颜色
           lcolor = "#0000ff";
           selectcolor()
         });

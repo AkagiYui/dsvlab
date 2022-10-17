@@ -3,7 +3,7 @@ Duosi Principles of Computer Composition Virtual Experiment System ,DS-VLAB v1.0
 Copyright(C)2013 ZHANG Wen-fen, Email: yydzhwf@163.com  Address: Xiangnan University, Chenzhou Hunan, China
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
 
-多思计算机组成原理网络虚拟实验系统, DS-VLAB v1.0 
+多思计算机组成原理网络虚拟实验系统, DS-VLAB v1.0
 版权所有(C) 张雯雰, 电子邮箱: yydzhwf@163.com
 本程序为自由软件；您可依据自由软件基金会所发表的GNU GENERAL PUBLIC LICENSE，对本程序再次发布和/或修改。
 
@@ -19,7 +19,7 @@ function CompoSwitch() {
     this.width = 17;
     this.height = 35;
     this.image = "./img/switchL.gif";
-    this.paddingLR = 0;    //paddingLR：芯片左右边距   
+    this.paddingLR = 0;    //paddingLR：芯片左右边距
     this.pinName = new Array("");
     this.pinWidth = (this.width - this.paddingLR * 2);    //引脚宽度不应小于16
     this.pinHeight = 10;
@@ -46,8 +46,8 @@ CompoSwitch.prototype.beReady = function () {
 
 //设置输入引脚的值，并且判断目前芯片是否已达到运算条件
 CompoSwitch.prototype.input = function () {
-    if (this.pinValue[0] == 0) {
-        this.pinValue[0] = 1;   
+    if (this.pinValue[0] === 0) {
+        this.pinValue[0] = 1;
     } else {
         this.pinValue[0] = 0;
     };
